@@ -1,0 +1,19 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<header class="py-6 flex items-center justify-center">
+    <ul class="flex items-center gap-8">
+        <li class={ currentPath === '/' ? 'underline' : 'hover:underline' }>
+            <a href="/">Home</a>
+        </li>
+        
+        <li class={ currentPath === '/blog' ? 'underline' : 'hover:underline' }>
+            <a href="/blog">Blog</a>
+        </li>
+
+        <li class={ currentPath === '/projects' ? 'underline' : 'hover:underline' }>
+            <a href="/projects">Projects</a>
+        </li>
+    </ul>
+</header>
